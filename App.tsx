@@ -1,10 +1,41 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import CustomSlider from "./components/Slider";
 export default function App() {
   return (
     <View style={styles.container}>
-      <CustomSlider />
+      <View>
+        <CustomSlider />
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            paddingVertical: 10,
+          }}
+        >
+          <Text
+            style={{
+              color: "white",
+              fontSize: 16,
+              textTransform: "uppercase",
+              fontWeight: "bold",
+            }}
+          >
+            Very Unpleasant
+          </Text>
+          <Text
+            style={{
+              color: "white",
+              fontSize: 16,
+              textTransform: "uppercase",
+              fontWeight: "bold",
+            }}
+          >
+            Very Pleasant
+          </Text>
+        </View>
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
